@@ -13,19 +13,20 @@ update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_111/bin/java 
 update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.8.0_111/bin/javac 100
 update-alternatives --display java
 update-alternatives --display javac
+sudo yum install -y git
+sudo yum install -y apache-maven
 
 # install gui
 yum -y groups install "GNOME Desktop"
-startx
-
 #install firefox
 cd /tmp
 #wget https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64/en-GB/firefox-46.0.tar.bz2
 sudo tar -jxvf firefox-46.0.tar.bz2 -C /opt
 #install chrome
-./install_chrome.sh
+sh ./install_chrome.sh -f
 ##copylib to 
-
+systemctl set-default graphical.target 
+sudo init 6
 
 
 
