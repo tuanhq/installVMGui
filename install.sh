@@ -26,7 +26,7 @@ sudo tar -jxvf firefox-46.0.tar.bz2 -C /opt
 sh ./install_chrome.sh -f
 ##copylib to 
 systemctl set-default graphical.target 
-sudo init 6
+
 
 
 
